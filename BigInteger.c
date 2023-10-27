@@ -412,27 +412,27 @@ int check0(struct node *head)
     }
     return 0;
 }
-// struct BigInteger div1(struct BigInteger a, struct BigInteger b)
-// {
-//     struct BigInteger result;
-//     struct BigInteger rem, quo, one;
-//     result.sign = a.sign * b.sign;
-//     rem = a;
-//     rem.sign = 1;
-//     b.sign = 1;
-//     one.head = newnode(1);
-//     one.sign = 1;
-//     quo.head = newnode(0);
-//     quo.sign = 0;
-//     int f;
-//     f = compare(rem, b);
-//     while (f == 2)
-//     {
-//         rem = sub(rem, b);
-//         quo = add(quo, one);
-//         f = compare(rem, b);
-//     }
-//     result.head = quo.head;
-//     int count=0;
-//     return result;
-// }
+ struct BigInteger div1(struct BigInteger a, struct BigInteger b)
+ {
+     struct BigInteger result;
+     struct BigInteger rem, quo, one;
+     result.sign = a.sign * b.sign;
+     rem = a;
+     rem.sign = 1;
+     b.sign = 1;
+     one.head = newnode(1);
+     one.sign = 1;
+     quo.head = newnode(0);
+     quo.sign = 0;
+     int f;
+     f = compare(rem, b);
+     while (f == 2)
+     {
+         rem = sub(rem, b);
+         quo = add(quo, one);
+         f = compare(rem, b);
+     }
+     result.head = quo.head;
+     int count=0;
+     return result;
+ }
